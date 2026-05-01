@@ -1,0 +1,19 @@
+[project]
+name = "role-play-manager-rpm"
+version = "0.1.0"
+description = "Software para gerenciamento de backlog de jogos"
+authors = [
+    {name = "Marcos Queiroz",email = "marcosamfq123@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi[standard] (>=0.136.1,<0.137.0)",
+    "sqlmodel (>=0.0.38,<0.0.39)",
+    "alembic (>=1.18.4,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
