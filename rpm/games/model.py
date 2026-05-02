@@ -1,5 +1,6 @@
-from sqlmodel import SQLModel, Field
-from .enums import GameStatus, GamePlatform
+from sqlmodel import Field, SQLModel
+
+from .enums import GamePlatform, GameStatus
 
 
 class Game(SQLModel, table=True):

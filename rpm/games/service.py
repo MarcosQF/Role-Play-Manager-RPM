@@ -21,7 +21,9 @@ class GamesService:
         return db_game
 
     def get_games(self, offset: int = 0, limit: int = 100):
-        games = self.session.scalars(select(Game).offset(offset).limit(limit)).all()
+        games = self.session.scalars(
+            select(Game).offset(offset).limit(limit)
+        ).all()
         return games
 
     def get_game_by_id(self, game_id: int) -> Game:
