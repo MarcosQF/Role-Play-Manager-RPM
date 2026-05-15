@@ -26,6 +26,10 @@ dev = [
     "pytest-cov (>=7.1.0,<8.0.0)"
 ]
 
+[tool.poetry]
+# ...
+package-mode = false
+
 [tool.ruff]
 line-length = 79
 extend-exclude = [
