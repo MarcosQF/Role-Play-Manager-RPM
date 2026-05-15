@@ -1,0 +1,24 @@
+name: Run Tests
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.14.4'
+
+      - name: Install Poetry
+        run: pip install poetry
+
+      - name: Install Project
+        run: poetry install
+
+      - name: Run Tests
+        run: poetry run task test
